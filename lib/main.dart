@@ -2,6 +2,7 @@
 
 import 'package:envo_munish/modules/splash/splash%20screen/splash_screen.dart';
 import 'package:envo_munish/ui/matching_riders.dart';
+import 'package:envo_munish/ui/offer_pool.dart';
 import 'package:envo_munish/ui/payment_link.dart';
 import 'package:envo_munish/ui/pick_drop_screen.dart';
 import 'package:flutter/material.dart';
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             primarySwatch: Colors.blue,
           ),
-          home: PicknDrop(),
+          home: OfferPool(),
         );
       },
     );

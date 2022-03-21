@@ -63,7 +63,7 @@ class _PicknDropState extends State<PicknDrop> {
                 padding: EdgeInsets.all(15),
                 decoration: BoxDecoration(
                     border: Border.all(width: 0.2.w,color: Colors.black12),
-                    boxShadow: [
+                    boxShadow: const [
                       BoxShadow(
                         offset: Offset(5, 5),
                         blurRadius: 15,
@@ -88,7 +88,7 @@ class _PicknDropState extends State<PicknDrop> {
                     Text("SENDER'S INFORMATION*",style: TxtStyleN,),
                     Divider(color: Colors.black12,),
                     Text("SENDER'S NAME",style: txtStyleG,),
-                    Divider(color: Colors.black12,indent: 5,endIndent: 5,thickness: 1.0,),
+                    const Divider(color: Colors.black12,indent: 5,endIndent: 5,thickness: 1.0,),
 
 
                     //sender
@@ -147,7 +147,7 @@ class _PicknDropState extends State<PicknDrop> {
                       child: Container(
                         height: 6.h,
                         width: 100.w,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                             borderRadius: BorderRadius.all(Radius.circular(5)),
                             gradient: themeButtonColor),
                         child: Center(
