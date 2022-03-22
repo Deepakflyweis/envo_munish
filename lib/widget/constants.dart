@@ -13,9 +13,14 @@ TextStyle titleTxtStyle = const TextStyle(
   color: Colors.black,
   fontWeight: FontWeight.w500,
 );
-TextStyle TxtStyleN = const TextStyle(
+TextStyle txtStyleN = const TextStyle(
   fontSize: 16.0,
   color: Colors.black,
+  fontWeight: FontWeight.normal,
+);
+TextStyle txtStyleR = const TextStyle(
+  fontSize: 16.0,
+  color: appBarColor,
   fontWeight: FontWeight.normal,
 );
 

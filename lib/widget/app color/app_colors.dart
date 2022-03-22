@@ -8,8 +8,8 @@ const btnBColor = Color(0xFFF6C761);
 const greenbutton =Color(0xFF37BE56);
 const bckground =Color(0xFFFFF2E6);
 const borderblack =Color(0xFF707070);
+const borderorng =Color(0xFFFE5925);
 const greytxt =Color(0xFF828282);
-
 
 
 

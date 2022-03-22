@@ -31,7 +31,9 @@ class _PaymentLinkState extends State<PaymentLink> {
                      width: 3.w,
                    ),
                     GestureDetector(
-                      onTap: (){},
+                      onTap: (){
+                        // Get.toNamed('/loginScreen');
+                      },
                       child: Image.asset('assets/images/menu.png',height: 30,width: 30,fit: BoxFit.fill,),
                     ),
                    SizedBox(
@@ -42,7 +44,9 @@ class _PaymentLinkState extends State<PaymentLink> {
                      width: 25.w,
                    ),
                    IconButton(
-                       onPressed: (){},
+                       onPressed: (){
+                         // Get.toNamed('/notifications');
+                       },
                        icon: Icon(Icons.notifications, color: bgColor,size: 25,)),
                  ],
                ),
@@ -327,7 +331,7 @@ class _PaymentLinkState extends State<PaymentLink> {
                            height: 40 ,
                            width: 80 ,
                            alignment: Alignment.center,
-                           decoration: BoxDecoration(
+                           decoration: const BoxDecoration(
                                borderRadius: BorderRadius.all(Radius.circular(14.0)),
                                color: greenbutton
                            ),

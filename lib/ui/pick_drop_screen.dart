@@ -35,7 +35,9 @@ class _PicknDropState extends State<PicknDrop> {
                       width: 5.w,
                     ),
                     GestureDetector(
-                      onTap: (){},
+                      onTap: (){
+                        // Get.toNamed('/loginScreen');
+                      },
                       child: Image.asset('assets/images/menu.png',height: 30,width: 30,fit: BoxFit.fill,),
                     ),
                     SizedBox(
@@ -46,7 +48,9 @@ class _PicknDropState extends State<PicknDrop> {
                       width: 20.w,
                     ),
                     IconButton(
-                        onPressed: (){},
+                        onPressed: (){
+                          // Get.toNamed('/notifications');
+                        },
                         icon: Icon(Icons.notifications, color: bgColor,size: 25,)),
                   ],
                 ),
@@ -79,13 +83,13 @@ class _PicknDropState extends State<PicknDrop> {
                     SizedBox(
                       height: 3.h,
                     ),
-                    Text('PICKUP & DROP LOCATION*',style: TxtStyleN,),
+                    Text('PICKUP & DROP LOCATION*',style: txtStyleN,),
                     Divider(color: Colors.black12,),
 
                     SizedBox(
                       height: 10.h,
                     ),
-                    Text("SENDER'S INFORMATION*",style: TxtStyleN,),
+                    Text("SENDER'S INFORMATION*",style: txtStyleN,),
                     Divider(color: Colors.black12,),
                     Text("SENDER'S NAME",style: txtStyleG,),
                     const Divider(color: Colors.black12,indent: 5,endIndent: 5,thickness: 1.0,),
@@ -113,7 +117,7 @@ class _PicknDropState extends State<PicknDrop> {
                     SizedBox(
                       height: 5.h,
                     ),
-                    Text("RECIEVER'S INFORMATION*",style: TxtStyleN,),
+                    Text("RECIEVER'S INFORMATION*",style: txtStyleN,),
                     Divider(color: Colors.black12,),
                     Text("Reciever's name",style: txtStyleG,),
                     Divider(color: Colors.black12,indent: 5,endIndent: 5,thickness: 1.0,),

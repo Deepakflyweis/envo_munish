@@ -33,7 +33,9 @@ class _OfferPoolState extends State<OfferPool> {
                     width: 5.w,
                   ),
                   GestureDetector(
-                    onTap: (){},
+                    onTap: (){
+                      // Get.toNamed('/loginScreen');
+                    },
                     child: Image.asset('assets/images/menu.png',height: 30,width: 30,fit: BoxFit.fill,),
                   ),
                   SizedBox(
@@ -44,99 +46,112 @@ class _OfferPoolState extends State<OfferPool> {
                     width: 20.w,
                   ),
                   IconButton(
-                      onPressed: (){},
+                      onPressed: (){
+                        // Get.toNamed('/notifications');
+                      },
                       icon: Icon(Icons.notifications, color: bgColor,size: 25,)),
                 ],
               ),
             ),
 
+
             Container(
                 width: 425 ,
                 height: 300,
-                child: Image.asset('assets/images/location.png', fit: BoxFit.fill,)),
+                child: Image.asset('assets/images/location.png', fit: BoxFit.fitHeight,)),
 
-            Container(
-              height: 400,
-              width: 380,
-              padding:  EdgeInsets.all(20),
-              decoration: const BoxDecoration(
-              borderRadius:
-              BorderRadius.only(
-                  topRight: Radius.circular(20) ,topLeft: Radius.circular(20)),
-              ),
-              child: Column(
-                children: [
-                  Text("  Offer Pool",style: txtStyleG,),
-                  Row(
-                    children: [
-                      Container(
 
-                        decoration: BoxDecoration(
-                          color: bgColor,
-                          borderRadius: BorderRadius.circular(5.0),
-                          border: Border.all(width: 0.3, color: Colors.black54),
-                          boxShadow: <BoxShadow>[
-                            BoxShadow(
-                              blurRadius: 1.5,
-                              spreadRadius: 1.5,
-                              color: Colors.grey.shade200,
-                            ),
-                          ],
-                        ),
-                        child: TextFormField(
-                          controller: _fromDest,
-                          keyboardType: TextInputType.text,
-                          validator: (value) {
-                            if (value!.isEmpty) {
-                              return 'Field can\'t be empty';
-                            }
-                            return null;
-                          },
-                          decoration: InputDecoration(
-                            contentPadding: const EdgeInsets.all(12.0),
-                            hintText: 'Delhi',
-                            border: InputBorder.none,
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        height: 2.h,
-                      ),
-
-                      Container(
-                        decoration: BoxDecoration(
-                          color: bgColor,
-                          borderRadius: BorderRadius.circular(5.0),
-                          border: Border.all(width: 0.3, color: Colors.black54),
-                          boxShadow: <BoxShadow>[
-                            BoxShadow(
-                              blurRadius: 1.5,
-                              spreadRadius: 1.5,
-                              color: Colors.grey.shade200,
-                            ),
-                          ],
-                        ),
-                        child: TextFormField(
-                          controller: _toDest,
-                          keyboardType: TextInputType.text,
-                          validator: (value) {
-                            if (value!.isEmpty) {
-                              return 'Field can\'t be empty';
-                            }
-                            return null;
-                          },
-                          decoration: InputDecoration(
-                            contentPadding: const EdgeInsets.all(12.0),
-                            hintText: 'Haryana',
-                            border: InputBorder.none,
-                          ),
-                        ),
-                      ),
-
-                    ],
-                  )
-                ],
-              ))
+            // Container(
+            //     height: 600,
+            //     width: 380,
+            //
+            //     decoration: BoxDecoration(
+            //         border: Border.all(width: 0.2.w,color: Colors.black12),
+            //         color: borderblack,
+            //         boxShadow: const [
+            //           BoxShadow(
+            //             offset: Offset(5, 5),
+            //             blurRadius: 15,
+            //             color:bckground,)
+            //
+            //         ],
+            //         borderRadius:
+            //         BorderRadius.all(Radius.circular(10))),
+            //   child: Column(
+            //     mainAxisAlignment: MainAxisAlignment.start,
+            //     crossAxisAlignment: CrossAxisAlignment.start,
+            //     children: [
+            //       Text("Offer Pool",style: txtStyleG,),
+            //       Row(
+            //         children: [
+            //           Container(
+            //
+            //             decoration: BoxDecoration(
+            //               color: bgColor,
+            //               borderRadius: BorderRadius.circular(5.0),
+            //               border: Border.all(width: 0.3, color: Colors.black54),
+            //               boxShadow: <BoxShadow>[
+            //                 BoxShadow(
+            //                   blurRadius: 1.5,
+            //                   spreadRadius: 1.5,
+            //                   color: Colors.grey.shade200,
+            //                 ),
+            //               ],
+            //             ),
+            //             child: TextFormField(
+            //               controller: _fromDest,
+            //               keyboardType: TextInputType.text,
+            //               validator: (value) {
+            //                 if (value!.isEmpty) {
+            //                   return 'Field can\'t be empty';
+            //                 }
+            //                 return null;
+            //               },
+            //               decoration: InputDecoration(
+            //                 contentPadding: const EdgeInsets.all(12.0),
+            //                 hintText: 'Delhi',
+            //                 border: InputBorder.none,
+            //               ),
+            //             ),
+            //           ),
+            //           SizedBox(
+            //             height: 2.h,
+            //           ),
+            //
+            //           Container(
+            //             decoration: BoxDecoration(
+            //               color: borderblack,
+            //               borderRadius: BorderRadius.circular(5.0),
+            //               border: Border.all(width: 0.3, color: Colors.black54),
+            //               boxShadow: <BoxShadow>[
+            //                 BoxShadow(
+            //                   blurRadius: 1.5,
+            //                   spreadRadius: 1.5,
+            //                   color: Colors.grey.shade200,
+            //                 ),
+            //               ],
+            //             ),
+            //             child: TextFormField(
+            //               controller: _toDest,
+            //               keyboardType: TextInputType.text,
+            //               validator: (value) {
+            //                 if (value!.isEmpty) {
+            //                   return 'Field can\'t be empty';
+            //                 }
+            //                 return null;
+            //               },
+            //               decoration: InputDecoration(
+            //                 contentPadding: const EdgeInsets.all(12.0),
+            //                 hintText: 'Haryana',
+            //                 border: InputBorder.none,
+            //               ),
+            //             ),
+            //           ),
+            //
+            //         ],
+            //       )
+            //     ],
+            //   ))
           ],
         ),
       ),
