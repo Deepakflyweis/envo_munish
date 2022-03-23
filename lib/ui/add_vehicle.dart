@@ -151,12 +151,11 @@ class _AddVehicleState extends State<AddVehicle> {
                     indent: 30,
                     endIndent: 160,
                   ),
-
                       SizedBox(
                         height: 2.h,
                       ),
 
-                      const Text(
+                        const Text(
                           'Offering Seats',
                           style: TextStyle(
                         fontSize: 16.0,

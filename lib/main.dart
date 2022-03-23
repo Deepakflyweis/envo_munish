@@ -17,6 +17,7 @@ import 'package:flutter/services.dart';
 import 'package:sizer/sizer.dart';
 import 'package:get/get.dart';
 
+import 'modules/home/account_screen.dart';
 import 'modules/home/home_menu/menu_home.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -41,7 +42,7 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             primarySwatch: Colors.blue,
           ),
-          home: AddVehicle(),
+          home: AccountScreen(),
         );
       },
     );

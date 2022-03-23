@@ -54,14 +54,23 @@ class _AccountScreenState extends State<AccountScreen> {
                 Container(
                   decoration: const BoxDecoration(
                     borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(25),
-                      topRight: Radius.circular(25),
+                      topLeft: Radius.circular(35),
+                      topRight: Radius.circular(35),
                     ),
-                    color: bgColor,
+                    color: appBarColor,
                   ),
                   child: Column(
                     children: [
-                      Center()
+                      Center(
+                        child: CircleAvatar(
+                          backgroundColor: bgColor,
+                          radius: 8,
+                          child: Image.asset('assets/images/profile.png'),
+                        ),
+                      ),
+                      Center(
+                         child: Text('Alex +91 9876543210'),
+                      )
                     ],
                   ),
                 )
