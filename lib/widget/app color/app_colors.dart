@@ -10,6 +10,7 @@ const bckground =Color(0xFFFFF2E6);
 const borderblack =Color(0xFF707070);
 const borderorng =Color(0xFFFE5925);
 const greytxt =Color(0xFF828282);
+const blueclr =Color(0xFF275097);
 
 
 

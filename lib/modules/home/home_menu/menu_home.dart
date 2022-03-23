@@ -16,30 +16,30 @@ class _HomeMenuState extends State<HomeMenu> {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-          appBar: AppBar(
-          backgroundColor: bgColor,
-          elevation: 0,
-          leading: IconButton(
-              color: borderblack,
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              icon: const Icon(
-                Icons.close_rounded,
-                color: appBarColor,
-                size: 35,
-              )),
-          title: Center(
-            child: Image.asset(
-              "assets/images/logo.png",
-              width: 75,
-              height: 45,
-            ),
+      appBar: AppBar(
+        backgroundColor: bgColor,
+        elevation: 0,
+        leading: IconButton(
+            color: borderblack,
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: const Icon(
+              Icons.close_rounded,
+              color: appBarColor,
+              size: 35,
+            )),
+        title: Center(
+          child: Image.asset(
+            "assets/images/logo.png",
+            width: 75,
+            height: 45,
           ),
         ),
-        backgroundColor: bgColor,
-        body: SingleChildScrollView(
-          child: Padding(
+      ),
+      backgroundColor: bgColor,
+      body: SingleChildScrollView(
+        child: Padding(
           padding: EdgeInsets.all(20.0),
           child: Column(children: [
             SizedBox(
@@ -49,40 +49,44 @@ class _HomeMenuState extends State<HomeMenu> {
               padding: EdgeInsets.all(20),
               height: 140,
               width: 435,
-              decoration:   const BoxDecoration(
-                color:bgColor,
+              decoration: const BoxDecoration(
+                color: bgColor,
                 boxShadow: [
                   BoxShadow(
-                    offset:  Offset(1.0, 1.0,),
+                    offset: Offset(
+                      1.0,
+                      1.0,
+                    ),
                     color: Colors.grey,
                     blurRadius: 10.0,
                     spreadRadius: 2.0,
-                  ),  ],
+                  ),
+                ],
               ),
               child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start ,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-
-                  Image.asset('assets/images/user.png',width: 75,height: 75,),
-
-                SizedBox(
-                  width: 1.w,
-                ),
+                  Image.asset(
+                    'assets/images/user.png',
+                    width: 75,
+                    height: 75,
+                  ),
+                  SizedBox(
+                    width: 1.w,
+                  ),
                   Column(
-                    crossAxisAlignment: CrossAxisAlignment.start ,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Text('Username',style: titleTxtStyle),
-                      Text('abc@gmail.com',style: txtStyleN),
+                      Text('Username', style: titleTxtStyle),
+                      Text('abc@gmail.com', style: txtStyleN),
                       SizedBox(
                         height: 1.h,
                       ),
-                      Text('Manage Profile',style: txtStyleR),
-
+                      Text('Manage Profile', style: txtStyleR),
                     ],
                   ),
-
                   IconButton(
                       color: borderblack,
                       onPressed: () {
@@ -93,7 +97,6 @@ class _HomeMenuState extends State<HomeMenu> {
                         color: appBarColor,
                         size: 20,
                       )),
-
                 ],
               ),
             ),

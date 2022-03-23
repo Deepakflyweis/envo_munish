@@ -229,15 +229,18 @@ class _MatchingRiderState extends State<MatchingRider> {
                     SizedBox(
                       width: 2.w,
                     ),
-                    Container(
-                      height: 40 ,
-                      width: 80 ,
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(14.0)),
-                          color: greenbutton
+                    GestureDetector(
+                      onTap: (){},
+                      child: Container(
+                        height: 40 ,
+                        width: 80 ,
+                        alignment: Alignment.center,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(14.0)),
+                            color: greenbutton
+                        ),
+                        child: Text('Request',style: btntxtStyle,),
                       ),
-                      child: Text('Request',style: btntxtStyle,),
                     ),
 
 

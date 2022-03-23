@@ -13,6 +13,52 @@ class AddVehicle extends StatefulWidget {
 class _AddVehicleState extends State<AddVehicle> {
   bool? valuefirst = false;
 
+
+  final List locale = [
+    {'name': 'Hatch Back',  },
+    {'name': 'Sedan',  },
+    {'name': 'SUV',  },
+    {'name': 'Premium',  },
+
+  ];
+
+
+
+  buildCarDialog(BuildContext context) {
+    showDialog(
+        context: context,
+        builder: (builder) {
+          return AlertDialog(
+            content: SizedBox(
+              width: double.maxFinite,
+              child: ListView.separated(
+                  shrinkWrap: true,
+                  itemBuilder: (context, index) {
+                    return Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: GestureDetector(
+                        child: Container(
+                            color: Colors.white,
+                            height: MediaQuery.of(context).size.height*0.04,
+                            child: Text(locale[index]['name'])),
+                        onTap: () {
+
+                        },
+                      ),
+                    );
+                  },
+                  separatorBuilder: (context, index) {
+                    return const Divider(
+                      color: Colors.blue,
+                    );
+                  },
+                  itemCount: locale.length),
+            ),
+          );
+        });
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -76,24 +122,39 @@ class _AddVehicleState extends State<AddVehicle> {
 
                   //model
                   InkWell(
-                    onTap: (){},
-                    child: TextFormField(
-                      decoration: const InputDecoration(
-                        border: InputBorder.none,
-                        focusedBorder: InputBorder.none,
-                        enabledBorder: InputBorder.none,
-                        errorBorder: InputBorder.none,
-                        disabledBorder: InputBorder.none,
-                        contentPadding: EdgeInsets.only(
-                            left: 35, bottom: 2, top: 11, right: 35),
-                        hintText: "Hatch back",
-                        suffixIcon: Icon(
-                          Icons.arrow_drop_down_outlined,
-                          color: Colors.black,
-                          size: 25,
-                        ),
-                      ),
-                    ),
+                    onTap: (){
+                      buildCarDialog(context);
+                    },
+                    child: Row(
+
+                       children: [
+                         SizedBox(
+                           width: 10.w,
+                         ),
+                         Text('Hatch'),
+                         SizedBox(
+                           width: 60.w,
+                         ),
+                         Icon(Icons.arrow_drop_down_outlined)
+                       ],
+                    )
+                    // TextFormField(
+                    //   decoration: const InputDecoration(
+                    //     border: InputBorder.none,
+                    //     focusedBorder: InputBorder.none,
+                    //     enabledBorder: InputBorder.none,
+                    //     errorBorder: InputBorder.none,
+                    //     disabledBorder: InputBorder.none,
+                    //     contentPadding: EdgeInsets.only(
+                    //         left: 35, bottom: 2, top: 11, right: 35),
+                    //     hintText: "Hatch back",
+                    //     suffixIcon: Icon(
+                    //       Icons.arrow_drop_down_outlined,
+                    //       color: Colors.black,
+                    //       size: 25,
+                    //     ),
+                    //   ),
+                    // ),
                   ),
                   const Divider(
                     thickness: 1,
