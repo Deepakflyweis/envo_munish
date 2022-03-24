@@ -1,9 +1,12 @@
 
 import 'package:envo_munish/essitnails/essentail_files.dart';
+import 'package:envo_munish/modules/home/home_menu/menu_home.dart';
 import 'package:envo_munish/widget/app%20color/app_colors.dart';
 import 'package:envo_munish/widget/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
+
+import 'notifications.dart';
 
 class PicknDrop extends StatefulWidget {
   const PicknDrop({Key? key}) : super(key: key);
@@ -36,7 +39,8 @@ class _PicknDropState extends State<PicknDrop> {
                     ),
                     GestureDetector(
                       onTap: (){
-                        // Get.toNamed('/loginScreen');
+                        Get.to(()=> HomeMenu());
+
                       },
                       child: Image.asset('assets/images/menu.png',height: 30,width: 30,fit: BoxFit.fill,),
                     ),
@@ -49,7 +53,8 @@ class _PicknDropState extends State<PicknDrop> {
                     ),
                     IconButton(
                         onPressed: (){
-                          // Get.toNamed('/notifications');
+                          Get.to(()=> Notifications());
+
                         },
                         icon: Icon(Icons.notifications, color: bgColor,size: 25,)),
                   ],

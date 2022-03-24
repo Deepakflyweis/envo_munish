@@ -2,6 +2,7 @@
 
 import 'package:envo_munish/essitnails/essentail_files.dart';
 import 'package:envo_munish/modules/home/create%20ride/create%20ride%20controller/create_ride_controller.dart';
+import 'package:envo_munish/ui/riders_pledge.dart';
 import 'package:envo_munish/widget/app%20color/app_colors.dart';
 
 import 'package:intl/intl.dart';
@@ -108,22 +109,29 @@ class CreateRideScreen extends StatelessWidget {
                     SizedBox(
                       height: 40.h,
                     ),
-                  Container(
-                          height: 6.h,
-                          width: 100.w,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.all(Radius.circular(50)),
-                              gradient: themeButtonColor),
-                          child: Center(
-                            child: Text(
-                              "Continue",
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 15.sp,
-                                  fontWeight: FontWeight.bold),
+
+                  InkWell(
+                    onTap: (){
+                      Get.to(()=> RidersPledge());
+                    },
+
+                    child: Container(
+                            height: 6.h,
+                            width: 100.w,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.all(Radius.circular(50)),
+                                gradient: themeButtonColor),
+                            child: Center(
+                              child: Text(
+                                "Continue",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 15.sp,
+                                    fontWeight: FontWeight.bold),
+                              ),
                             ),
                           ),
-                        ),
+                  ),
                      SizedBox(
                        height: 6.h,
                      )

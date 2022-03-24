@@ -1,5 +1,11 @@
 
 import 'package:envo_munish/essitnails/essentail_files.dart';
+import 'package:envo_munish/modules/home/home_menu/menu_home.dart';
+import 'package:envo_munish/ui/matching_riders.dart';
+import 'package:envo_munish/ui/notifications.dart';
+import 'package:envo_munish/ui/offer_pool.dart';
+import 'package:envo_munish/utils/drop_loc_popup.dart';
+import 'package:envo_munish/utils/pickup_loc_popup.dart';
 import 'package:envo_munish/widget/app%20color/app_colors.dart';
 import 'package:envo_munish/widget/constants.dart';
 import 'package:flutter/material.dart';
@@ -32,9 +38,10 @@ class _CarpoolScreenState extends State<CarpoolScreen> {
                 ),
                 GestureDetector(
                   onTap: (){
-                    // Get.toNamed('/loginScreen');
+                    Get.to(()=> HomeMenu());
+
                   },
-                  child: Image.asset('assets/images/menu.png',height: 30,width: 30,fit: BoxFit.fill,),
+                  child: Image.asset('assets/images/menu.png',height: 30,width: 35,fit: BoxFit.fill,),
                 ),
                 SizedBox(
                   width: 30.w,
@@ -45,7 +52,8 @@ class _CarpoolScreenState extends State<CarpoolScreen> {
                 ),
                 IconButton(
                     onPressed: (){
-                      // Get.toNamed('/notifications');
+                      Get.to(()=> Notifications());
+
                     },
                     icon: Icon(Icons.notifications, color: bgColor,size: 25,)),
               ],
@@ -65,34 +73,39 @@ class _CarpoolScreenState extends State<CarpoolScreen> {
                   padding: EdgeInsets.all(15),
                 child: Column(
                   children: [
-                    Container(
-                      width: 320,
-                      decoration: BoxDecoration(
-                        color: bgColor,
-                        borderRadius: BorderRadius.circular(60.0),
-                        border: Border.all(width: 0.3, color: appBarColor),
-                        boxShadow: const <BoxShadow>[
-                          BoxShadow(
-                            blurRadius: 0.5,
-                            spreadRadius:0.5,
-                            color:  borderorng,
+                    InkWell(
+                      onTap: (){
+                        Get.to(()=> PickupPopup());
+                      },
+                      child: Container(
+                        width: 320,
+                        decoration: BoxDecoration(
+                          color: bgColor,
+                          borderRadius: BorderRadius.circular(60.0),
+                          border: Border.all(width: 0.3, color: appBarColor),
+                          boxShadow: const <BoxShadow>[
+                            BoxShadow(
+                              blurRadius: 0.5,
+                              spreadRadius:0.5,
+                              color:  borderorng,
+                            ),
+                          ],
+                        ),
+                        child: TextFormField(
+                          controller: _pickuploc,
+                          keyboardType: TextInputType.text,
+                          validator: (value) {
+                            if (value!.isEmpty) {
+                              return 'Field can\'t be empty';
+                            }
+                            return null;
+                          },
+                          decoration: const InputDecoration(
+                            contentPadding: EdgeInsets.all(12.0),
+                            hintText: 'Pick Up Location',
+                            prefixIcon: Icon(Icons.search),
+                            border: InputBorder.none,
                           ),
-                        ],
-                      ),
-                      child: TextFormField(
-                        controller: _pickuploc,
-                        keyboardType: TextInputType.text,
-                        validator: (value) {
-                          if (value!.isEmpty) {
-                            return 'Field can\'t be empty';
-                          }
-                          return null;
-                        },
-                        decoration: const InputDecoration(
-                          contentPadding: EdgeInsets.all(12.0),
-                          hintText: 'Pick Up Location',
-                          prefixIcon: Icon(Icons.search),
-                          border: InputBorder.none,
                         ),
                       ),
                     ),
@@ -101,34 +114,40 @@ class _CarpoolScreenState extends State<CarpoolScreen> {
                       height: 3.h,
                     ),
 
-                    Container(
-                      width: 320,
-                      decoration: BoxDecoration(
-                        color: bgColor,
-                        borderRadius: BorderRadius.circular(60.0),
-                        border: Border.all(width: 0.3, color: appBarColor),
-                        boxShadow: const <BoxShadow>[
-                          BoxShadow(
-                            blurRadius: 0.5,
-                            spreadRadius:0.5,
-                            color:  borderorng,
+                    InkWell(
+                      onTap: (){
+                        Get.to(()=> DropPopup());
+                      },
+
+                      child: Container(
+                        width: 320,
+                        decoration: BoxDecoration(
+                          color: bgColor,
+                          borderRadius: BorderRadius.circular(60.0),
+                          border: Border.all(width: 0.3, color: appBarColor),
+                          boxShadow: const <BoxShadow>[
+                            BoxShadow(
+                              blurRadius: 0.5,
+                              spreadRadius:0.5,
+                              color:  borderorng,
+                            ),
+                          ],
+                        ),
+                        child: TextFormField(
+                          controller: _droploc,
+                          keyboardType: TextInputType.text,
+                          validator: (value) {
+                            if (value!.isEmpty) {
+                              return 'Field can\'t be empty';
+                            }
+                            return null;
+                          },
+                          decoration: const InputDecoration(
+                            contentPadding: EdgeInsets.all(12.0),
+                            hintText: 'Drop Location',
+                            prefixIcon: Icon(Icons.search),
+                            border: InputBorder.none,
                           ),
-                        ],
-                      ),
-                      child: TextFormField(
-                        controller: _pickuploc,
-                        keyboardType: TextInputType.text,
-                        validator: (value) {
-                          if (value!.isEmpty) {
-                            return 'Field can\'t be empty';
-                          }
-                          return null;
-                        },
-                        decoration: const InputDecoration(
-                          contentPadding: EdgeInsets.all(12.0),
-                          hintText: 'Drop Location',
-                          prefixIcon: Icon(Icons.search),
-                          border: InputBorder.none,
                         ),
                       ),
                     ),
@@ -139,7 +158,9 @@ class _CarpoolScreenState extends State<CarpoolScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         GestureDetector(
-                          onTap: (){},
+                          onTap: (){
+                            Get.to(()=> MatchingRider());
+                          },
                           child: Container(
                             height: 45 ,
                             width: 170 ,
@@ -156,7 +177,10 @@ class _CarpoolScreenState extends State<CarpoolScreen> {
                         ),
 
                         GestureDetector(
-                          onTap: (){},
+                          onTap: (){
+                            Get.to(()=> OfferPool());
+
+                          },
                           child: Container(
                             height: 45 ,
                             width: 170 ,

@@ -1,7 +1,10 @@
 
+import 'package:envo_munish/ui/request_cancel.dart';
 import 'package:envo_munish/widget/app%20color/app_colors.dart';
 import 'package:envo_munish/widget/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:sizer/sizer.dart';
 
 class HistoryScreen extends StatefulWidget {
@@ -85,50 +88,55 @@ class _HistoryScreenState extends State<HistoryScreen> {
                         Icon(Icons.filter_list_outlined),
                       ],
                     ),
-                    SizedBox(
-                      height: 100,
-                      child: Card(
-                        elevation: 5,
-                        child:  Row(
-                          children: [
-                            SizedBox(
-                              width: 2.w,
-                            ),
-                            CircleAvatar(
-                              radius: 25,
-                              child: Image.asset('assets/images/driver.png',fit: BoxFit.fill,),),
+                    InkWell(
+                      onTap: (){
+                        Get.to(()=> RequestCancel());
+                      },
+                      child: SizedBox(
+                        height: 100,
+                        child: Card(
+                          elevation: 5,
+                          child:  Row(
+                            children: [
+                              SizedBox(
+                                width: 2.w,
+                              ),
+                              CircleAvatar(
+                                radius: 25,
+                                child: Image.asset('assets/images/driver.png',fit: BoxFit.fill,),),
 
-                            SizedBox(
-                              width: 2.w,
-                            ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text('New Delhi ----- Noida',style: titleTxtStyle,),
-                                Text('Tue,20/12/2021,04:00 PM',style: txtStyleG,),
-                                Text('Load Total Amount: ₹ xxx.xx',style: txtStyleG,),
+                              SizedBox(
+                                width: 2.w,
+                              ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text('New Delhi ----- Noida',style: titleTxtStyle,),
+                                  Text('Tue,20/12/2021,04:00 PM',style: txtStyleG,),
+                                  Text('Load Total Amount: ₹ xxx.xx',style: txtStyleG,),
 
-                              ],
-                            ),
-                            SizedBox(
-                              width: 1.w,
-                            ),
-                            Container(
-                                height: 35 ,
-                                width: 80 ,
-                                alignment: Alignment.center,
-                                decoration: const BoxDecoration(
-                                    borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                                    color: Colors.redAccent
-                                ),
-                                child: const Text('Cancelled',style:  TextStyle(
-                                  fontSize: 14.0,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.w400,),
-                                )
-                            ),
-                          ],
+                                ],
+                              ),
+                              SizedBox(
+                                width: 1.w,
+                              ),
+                              Container(
+                                  height: 35 ,
+                                  width: 80 ,
+                                  alignment: Alignment.center,
+                                  decoration: const BoxDecoration(
+                                      borderRadius: BorderRadius.all(Radius.circular(5.0)),
+                                      color: Colors.redAccent
+                                  ),
+                                  child: const Text('Cancelled',style:  TextStyle(
+                                    fontSize: 14.0,
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w400,),
+                                  )
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ),

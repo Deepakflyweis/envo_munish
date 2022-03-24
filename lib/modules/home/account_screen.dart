@@ -1,5 +1,7 @@
 
 import 'package:envo_munish/essitnails/essentail_files.dart';
+import 'package:envo_munish/modules/home/home_menu/menu_home.dart';
+import 'package:envo_munish/ui/notifications.dart';
 import 'package:envo_munish/widget/app%20color/app_colors.dart';
 import 'package:envo_munish/widget/constants.dart';
 import 'package:flutter/material.dart';
@@ -32,7 +34,7 @@ class _AccountScreenState extends State<AccountScreen> {
                       ),
                       GestureDetector(
                         onTap: (){
-                          // Get.toNamed('/loginScreen');
+                          Get.to(()=> HomeMenu());
                         },
                         child: Image.asset('assets/images/menu.png',height: 30,width: 30,fit: BoxFit.fill,),
                       ),
@@ -45,7 +47,7 @@ class _AccountScreenState extends State<AccountScreen> {
                       ),
                       IconButton(
                           onPressed: (){
-                            // Get.toNamed('/notifications');
+                            Get.to(()=> Notifications());
                           },
                           icon: Icon(Icons.notifications, color: bgColor,size: 25,)),
                     ],

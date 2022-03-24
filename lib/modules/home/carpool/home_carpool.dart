@@ -1,5 +1,6 @@
 
 import 'package:envo_munish/modules/home/home_menu/chat_screen.dart';
+import 'package:envo_munish/ui/history_screen.dart';
 import 'package:envo_munish/ui/my_rides.dart';
 import 'package:envo_munish/widget/app%20color/app_colors.dart';
 import 'package:envo_munish/widget/constants.dart';
@@ -45,7 +46,7 @@ class _Carpool_HomeState extends State<Carpool_Home> {
 
   List<Widget> navigationPage = [
     CarpoolScreen(),
-    MyRides(),
+    HistoryScreen(),
     ChatScreen(),
     AccountScreen(),
 

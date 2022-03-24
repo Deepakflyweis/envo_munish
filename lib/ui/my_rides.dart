@@ -1,5 +1,7 @@
 
 import 'package:envo_munish/essitnails/essentail_files.dart';
+import 'package:envo_munish/modules/home/home_menu/menu_home.dart';
+import 'package:envo_munish/ui/notifications.dart';
 import 'package:envo_munish/widget/app%20color/app_colors.dart';
 import 'package:envo_munish/widget/constants.dart';
 import 'package:flutter/material.dart';
@@ -33,7 +35,8 @@ class _MyRidesState extends State<MyRides> {
                   ),
                   GestureDetector(
                     onTap: (){
-                      // Get.toNamed('/loginScreen');
+                     Get.to(()=> HomeMenu());
+
                     },
                     child: Image.asset('assets/images/menu.png',height: 30,width: 30,fit: BoxFit.fill,),
                   ),
@@ -46,7 +49,7 @@ class _MyRidesState extends State<MyRides> {
                   ),
                   IconButton(
                       onPressed: (){
-                        // Get.toNamed('/notifications');
+                        Get.to(()=> Notifications());
                       },
                       icon: Icon(Icons.notifications, color: bgColor,size: 25,)),
                 ],
@@ -136,19 +139,24 @@ class _MyRidesState extends State<MyRides> {
                       SizedBox(
                         width: 1.w,
                       ),
-                      Container(
-                        height: 35 ,
-                        width: 80 ,
-                        alignment: Alignment.center,
-                        decoration: const BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                            color: greenbutton
+                      InkWell(
+                        onTap: (){
+
+                        },
+                        child: Container(
+                          height: 35 ,
+                          width: 80 ,
+                          alignment: Alignment.center,
+                          decoration: const BoxDecoration(
+                              borderRadius: BorderRadius.all(Radius.circular(5.0)),
+                              color: greenbutton
+                          ),
+                          child: const Text('On Going',style:  TextStyle(
+                              fontSize: 14.0,
+                              color: Colors.white,
+                              fontWeight: FontWeight.w400,),
+                          )
                         ),
-                        child: const Text('On Going',style:  TextStyle(
-                            fontSize: 14.0,
-                            color: Colors.white,
-                            fontWeight: FontWeight.w400,),
-                        )
                       ),
                     ],
                   ),

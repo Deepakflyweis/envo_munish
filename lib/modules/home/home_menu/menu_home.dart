@@ -1,8 +1,21 @@
+
+
 import 'package:envo_munish/essitnails/essentail_files.dart';
+import 'package:envo_munish/modules/home/carpool/carpool_screen.dart';
+import 'package:envo_munish/modules/home/home_menu/chat_screen.dart';
+import 'package:envo_munish/modules/login/login_screen.dart';
+import 'package:envo_munish/ui/help_support.dart';
+import 'package:envo_munish/ui/history_screen.dart';
+import 'package:envo_munish/ui/my_rides.dart';
+import 'package:envo_munish/ui/my_vehicle.dart';
+import 'package:envo_munish/ui/payment_link.dart';
+import 'package:envo_munish/ui/refer_earn.dart';
 import 'package:envo_munish/widget/app%20color/app_colors.dart';
 import 'package:envo_munish/widget/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
+
+import '../account_screen.dart';
 
 class HomeMenu extends StatefulWidget {
   const HomeMenu({Key? key}) : super(key: key);
@@ -90,7 +103,7 @@ class _HomeMenuState extends State<HomeMenu> {
                   IconButton(
                       color: borderblack,
                       onPressed: () {
-                        Navigator.pop(context);
+                        Get.to(()=> AccountScreen());
                       },
                       icon: const Icon(
                         Icons.arrow_forward_ios_rounded,
@@ -108,7 +121,7 @@ class _HomeMenuState extends State<HomeMenu> {
             //Post Ride
             GestureDetector(
               onTap: () {
-                // Get.toNamed('/welcomeUser');
+                Get.to(()=> CarpoolScreen());
               },
               child: Row(
                 children: [
@@ -137,7 +150,9 @@ class _HomeMenuState extends State<HomeMenu> {
 
             //My Rides
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Get.to(()=> MyRides());
+              },
               child: Row(
                 children: [
                   SizedBox(
@@ -165,7 +180,9 @@ class _HomeMenuState extends State<HomeMenu> {
 
             //payment
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Get.to(()=> PaymentLink());
+              },
               child: Row(
                 children: [
                   SizedBox(
@@ -193,7 +210,9 @@ class _HomeMenuState extends State<HomeMenu> {
 
             //my vehicle
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Get.to(()=> MyVehicle());
+              },
               child: Row(
                 children: [
                   SizedBox(
@@ -221,7 +240,9 @@ class _HomeMenuState extends State<HomeMenu> {
 
             //rides history
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Get.to(()=> HistoryScreen());
+              },
               child: Row(
                 children: [
                   SizedBox(
@@ -249,7 +270,9 @@ class _HomeMenuState extends State<HomeMenu> {
 
             //help & support
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Get.to(()=> HelpnSupport());
+              },
               child: Row(
                 children: [
                   SizedBox(
@@ -277,7 +300,9 @@ class _HomeMenuState extends State<HomeMenu> {
 
             //Chat
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Get.to(()=> ChatScreen());
+              },
               child: Row(
                 children: [
                   SizedBox(
@@ -333,7 +358,9 @@ class _HomeMenuState extends State<HomeMenu> {
 
             //Refer & Rewards
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Get.to(()=> RefernEarn());
+              },
               child: Row(
                 children: [
                   SizedBox(
@@ -361,7 +388,9 @@ class _HomeMenuState extends State<HomeMenu> {
 
             //Logout
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Get.to(()=> LoginScreen());
+              },
               child: Row(
                 children: [
                   SizedBox(

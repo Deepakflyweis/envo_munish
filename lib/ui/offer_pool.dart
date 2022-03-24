@@ -1,9 +1,14 @@
 
+import 'package:envo_munish/modules/home/home_menu/menu_home.dart';
 import 'package:envo_munish/widget/app%20color/app_colors.dart';
 import 'package:envo_munish/widget/constants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:sizer/sizer.dart';
+
+import 'notifications.dart';
 
 class OfferPool extends StatefulWidget {
   const OfferPool({Key? key}) : super(key: key);
@@ -34,7 +39,7 @@ class _OfferPoolState extends State<OfferPool> {
                   ),
                   GestureDetector(
                     onTap: (){
-                      // Get.toNamed('/loginScreen');
+                      Get.to(()=> HomeMenu());
                     },
                     child: Image.asset('assets/images/menu.png',height: 30,width: 30,fit: BoxFit.fill,),
                   ),
@@ -47,7 +52,7 @@ class _OfferPoolState extends State<OfferPool> {
                   ),
                   IconButton(
                       onPressed: (){
-                        // Get.toNamed('/notifications');
+                        Get.to(()=> Notifications());
                       },
                       icon: Icon(Icons.notifications, color: bgColor,size: 25,)),
                 ],
