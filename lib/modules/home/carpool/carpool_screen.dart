@@ -27,6 +27,7 @@ class _CarpoolScreenState extends State<CarpoolScreen> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
+          automaticallyImplyLeading: false,
           flexibleSpace: Container(
             color: appBarColor,
             height: 70 ,
