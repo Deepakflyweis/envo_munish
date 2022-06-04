@@ -21,7 +21,7 @@ class _RidersPledgeState extends State<RidersPledge> {
            padding:   EdgeInsets.all(15.0),
            child: GestureDetector(
              onTap: (){
-               Get.to(()=> Carpool_Home(0));
+               Get.offAll(()=> Carpool_Home(0));
              },
              child: Column(
                children: [

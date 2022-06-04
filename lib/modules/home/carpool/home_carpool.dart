@@ -56,8 +56,6 @@ class _Carpool_HomeState extends State<Carpool_Home> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-
-
         backgroundColor: Colors.white,
           body: navigationPage.elementAt(_currentPage),
           bottomNavigationBar: _createBottomNavigationBar(),

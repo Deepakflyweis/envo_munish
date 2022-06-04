@@ -13,11 +13,13 @@ class SplashScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: bgColor,
-      body: SafeArea(child: Center(
-        child: Image.asset("assets/images/logo.png",
-        height: 20.h,
-        ),
-      )),
+      body: SafeArea(
+          child: Center(
+          child: Image.asset("assets/images/logo.png",
+          height: 20.h,
+          ),
+          )
+          ),
       
     );
   }

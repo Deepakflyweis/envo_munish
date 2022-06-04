@@ -22,8 +22,6 @@ class _AddVehicleState extends State<AddVehicle> {
 
   ];
 
-
-
   buildCarDialog(BuildContext context) {
     showDialog(
         context: context,
